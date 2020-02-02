@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stocks Dataviz</title>
+  </head>
+  <body>
+    <h1>My Stocks Dataviz</h1>    <div id="my-chart-container"></div>    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>        var series1 = {
+            x: [1, 2, 3, 4, 100, 200, 400],
+            y: [10, 15, 13, 17, 21, 29, 31],
+            mode: "markers"
+        }        var series2 = {
+            x: [2, 3, 4, 5],
+            y: [16, 5, 11, 9],
+            mode: "lines"
+        }        var series3 = {
+            x: [1, 2, 3, 4],
+            y: [12, 9, 15, 12],
+            mode: "lines+markers"
+        }        var data = [ series1, series2, series3 ]        var layout = {
+            title: "Line and Scatter Plot"
+        }        Plotly.newPlot("my-chart-container", data, layout, {responsive: true})    </script>
+  </body>
+</html>
